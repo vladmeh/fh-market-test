@@ -1,15 +1,16 @@
 <template>
     <div class="container mx-auto my-12">
-        <ServiceComponent/>
+        <ServiceCard/>
     </div>
 </template>
 
 <script>
-    import ServiceComponent from "../components/ServiceComponent";
+    import ServiceCard from "../components/ServiceCard";
+
     export default {
         name: "Service",
         components: {
-            ServiceComponent
+            ServiceCard
         }
     }
 </script>
