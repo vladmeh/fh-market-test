@@ -4,7 +4,8 @@
                 tag="img"
                 :to="{name: 'position', params: {alias: service.alias, name: service.name}}"
                 class="w-full cursor-pointer"
-                :src="service.image" :alt="service.name"
+                :src="service.image"
+                :alt="service.name"
         ></router-link>
         <div class="px-6 py-4">
             <h3 class="font-bold text-xl" v-text="service.name"></h3>
@@ -42,7 +43,7 @@
                     alias: 'abonement-fitness-house',
                     club: 'Fh club name',
                     description: 'Абонемент на посещение одного спортивного клуба сети Fitness House в течении 1 года но не более 100 занятий в утреннее время.',
-                    image: './images/fitness-1.jpg',
+                    image: '/images/fitness-1.jpg',
                     properties: [
                         {name: 'Количество занятий', value: '100 занятий'},
                         {name: 'Срок действия', value: '1 год'},

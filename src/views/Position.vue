@@ -1,17 +1,16 @@
 <template>
     <div class="container mx-auto my-12">
-        <h1 v-text="name"></h1>
+        <ServicePosition/>
     </div>
 </template>
 
 <script>
+    import ServicePosition from "../components/ServicePosition";
+
     export default {
         name: "Position",
-        props: {
-            name: {
-                type: String,
-                default: 'Position'
-            }
+        components: {
+            ServicePosition
         }
     }
 </script>
