@@ -33,52 +33,14 @@
 <script>
     export default {
         name: "ServicePosition",
-        data() {
-            return {
-                clubs: [
-                    {id: 1, title: 'FH на Энгельса'},
-                    {id: 2, title: 'FH на Чкаловской'},
-                    {id: 3, title: 'FH на Хасанской'},
-                    {id: 4, title: 'FH на Фучика'},
-                    {id: 5, title: 'FH на Таллинском'},
-                    {id: 6, title: 'FH на Стачек'},
-                    {id: 7, title: 'FH на Софийской'},
-                    {id: 8, title: 'FH на Северном'},
-                    {id: 9, title: 'FH на Савушкина'},
-                    {id: 10, title: 'FH на Пулковском'},
-                ],
-                service: {
-                    name: 'Абонемент Fitness House',
-                    alias: 'abonement-fitness-house',
-                    club: 'Fh club name',
-                    description: 'Абонемент на посещение одного спортивного клуба сети Fitness House в течении 1 года но не более 100 занятий в утреннее время.',
-                    image: '/images/fitness-1.jpg',
-                    properties: [
-                        {name: 'Количество занятий', value: '100 занятий'},
-                        {name: 'Срок действия', value: '1 год'},
-                        {name: 'Время посещения', value: 'Утро'},
-                        // { name : 'Категория тренера', value: 'мастер-тренер'},
-                        // { name : 'Тип секции', value: 'вода'},
-                    ],
-                    positions: [
-                        {club_Id: 1, price: 1000},
-                        {club_id: 2, price: 1000},
-                        {club_id: 3, price: 1000},
-                        {club_id: 4, price: 1000},
-                        {club_id: 5, price: 1200},
-                        {club_id: 6, price: 1200},
-                        // {club_id: 7, price: 1000},
-                        // {club_id: 8, price: 1200},
-                        // {club_id: 9, price: 1500},
-                        // {club_id: 10, price: 1500},
-                    ]
-                }
-            }
+        props: {
+            clubsLength: Number,
+            service: Object
         },
         computed: {
             textClub() {
-                if (this.service.positions.length !== 0) {
-                    if (this.service.positions.length === this.clubs.length) {
+                if (this.service.positions && this.service.positions.length !== 0) {
+                    if (this.service.positions.length === this.clubsLength) {
                         return 'Во всех клубах'
                     }
                     if (this.service.positions.length > 1) {

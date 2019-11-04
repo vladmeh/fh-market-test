@@ -1,0 +1,132 @@
+{
+    "services": [
+        {
+            "name": "Мультикарта Fitness House",
+            "alias": "multikarta-fitness-house",
+            "description": "Абонемент на посещение любого клуба сети Fitness House в течении 1 года но не более 100 занятий.",
+            "image": "https://cdn.pixabay.com/photo/2015/01/09/11/22/fitness-594143_960_720.jpg",
+            "properties": [
+                {
+                    "name": "Количество занятий",
+                    "value": "100 занятий"
+                },
+                {
+                    "name": "Срок действия",
+                    "value": "1 год"
+                }
+            ],
+            "positions": [
+                {
+                    "club_Id": 1,
+                    "price": 5000
+                },
+                {
+                    "club_id": 2,
+                    "price": 5000
+                },
+                {
+                    "club_id": 3,
+                    "price": 5000
+                },
+                {
+                    "club_id": 4,
+                    "price": 5000
+                },
+                {
+                    "club_id": 5,
+                    "price": 5200
+                },
+                {
+                    "club_id": 6,
+                    "price": 5200
+                },
+                {
+                    "club_id": 7,
+                    "price": 5000
+                },
+                {
+                    "club_id": 8,
+                    "price": 5200
+                },
+                {
+                    "club_id": 9,
+                    "price": 5500
+                },
+                {
+                    "club_id": 10,
+                    "price": 5500
+                }
+            ]
+        },
+        {
+            "name": "Абонемент Fitness House",
+            "alias": "abonement-fitness-house",
+            "description": "Абонемент на посещение одного спортивного клуба сети Fitness House в течении 1 года но не более 100 занятий в утреннее время.",
+            "image": "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg",
+            "properties": [
+                {
+                    "name": "Количество занятий",
+                    "value": "100 занятий"
+                },
+                {
+                    "name": "Срок действия",
+                    "value": "1 год"
+                },
+                {
+                    "name": "Время посещения",
+                    "value": "Утро"
+                },
+                {
+                    "name": "Категория тренера",
+                    "value": "мастер-тренер"
+                },
+                {
+                    "name": "Тип секции",
+                    "value": "вода"
+                }
+            ],
+            "positions": [
+                {
+                    "club_Id": 1,
+                    "price": 1000
+                },
+                {
+                    "club_id": 2,
+                    "price": 1000
+                },
+                {
+                    "club_id": 3,
+                    "price": 1000
+                },
+                {
+                    "club_id": 4,
+                    "price": 1000
+                },
+                {
+                    "club_id": 5,
+                    "price": 1200
+                },
+                {
+                    "club_id": 6,
+                    "price": 1200
+                },
+                {
+                    "club_id": 7,
+                    "price": 1000
+                },
+                {
+                    "club_id": 8,
+                    "price": 1200
+                },
+                {
+                    "club_id": 9,
+                    "price": 1500
+                },
+                {
+                    "club_id": 10,
+                    "price": 1500
+                }
+            ]
+        }
+    ]
+}
