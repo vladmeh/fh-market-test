@@ -3,7 +3,7 @@
         {
             "name": "Мультикарта Fitness House",
             "alias": "multikarta-fitness-house",
-            "description": "Абонемент на посещение любого клуба сети Fitness House в течении 1 года но не более 100 занятий.",
+            "description": "Абонемент на посещение любого спортивного клуба сети Fitness House в течении 1 года но не более 100 занятий в свбодное время.",
             "image": "https://cdn.pixabay.com/photo/2015/01/09/11/22/fitness-594143_960_720.jpg",
             "properties": [
                 {
@@ -15,54 +15,13 @@
                     "value": "1 год"
                 }
             ],
-            "positions": [
-                {
-                    "club_Id": 1,
-                    "price": 5000
-                },
-                {
-                    "club_id": 2,
-                    "price": 5000
-                },
-                {
-                    "club_id": 3,
-                    "price": 5000
-                },
-                {
-                    "club_id": 4,
-                    "price": 5000
-                },
-                {
-                    "club_id": 5,
-                    "price": 5200
-                },
-                {
-                    "club_id": 6,
-                    "price": 5200
-                },
-                {
-                    "club_id": 7,
-                    "price": 5000
-                },
-                {
-                    "club_id": 8,
-                    "price": 5200
-                },
-                {
-                    "club_id": 9,
-                    "price": 5500
-                },
-                {
-                    "club_id": 10,
-                    "price": 5500
-                }
-            ]
+            "price": 5000
         },
         {
             "name": "Абонемент Fitness House",
             "alias": "abonement-fitness-house",
             "description": "Абонемент на посещение одного спортивного клуба сети Fitness House в течении 1 года но не более 100 занятий в утреннее время.",
-            "image": "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg",
+            "image": "https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616_960_720.jpg",
             "properties": [
                 {
                     "name": "Количество занятий",
@@ -75,58 +34,93 @@
                 {
                     "name": "Время посещения",
                     "value": "Утро"
+                }
+            ],
+            "price": 1500
+        },
+        {
+            "name": "Детская секция вода",
+            "alias": "detskaya-sekcia-voda",
+            "description": "Абонемент на посещение определенного количества занятий детской секции в одном из спортивных клубов сети Fitness House с бассейном в течении 6 месяцев.",
+            "image": "https://cdn.pixabay.com/photo/2016/03/27/21/55/sunglasses-1284419_960_720.jpg",
+            "properties": [
+                {
+                    "name": "Количество занятий",
+                    "value": "18 занятий"
                 },
                 {
-                    "name": "Категория тренера",
-                    "value": "мастер-тренер"
+                    "name": "Срок действия",
+                    "value": "6 месяцев"
                 },
                 {
                     "name": "Тип секции",
                     "value": "вода"
                 }
             ],
-            "positions": [
+            "price": 2500
+        },
+        {
+            "name": "Пакет персональных тренировок",
+            "alias": "paket-prsonalnih-trenirovok",
+            "description": "Индивидуальная работа тренера с посетителем клуба, с учётом его целей и возможных ограничений.",
+            "image": "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg",
+            "properties": [
                 {
-                    "club_Id": 1,
-                    "price": 1000
+                    "name": "Количество занятий",
+                    "value": "18 занятий"
                 },
                 {
-                    "club_id": 2,
-                    "price": 1000
+                    "name": "Срок действия",
+                    "value": "6 месяцев"
                 },
                 {
-                    "club_id": 3,
-                    "price": 1000
-                },
-                {
-                    "club_id": 4,
-                    "price": 1000
-                },
-                {
-                    "club_id": 5,
-                    "price": 1200
-                },
-                {
-                    "club_id": 6,
-                    "price": 1200
-                },
-                {
-                    "club_id": 7,
-                    "price": 1000
-                },
-                {
-                    "club_id": 8,
-                    "price": 1200
-                },
-                {
-                    "club_id": 9,
-                    "price": 1500
-                },
-                {
-                    "club_id": 10,
-                    "price": 1500
+                    "name": "Категория тренера",
+                    "value": "мастер"
                 }
-            ]
+            ],
+            "price": 2000
+        },
+        {
+            "name": "Групповые занятия",
+            "alias": "gruppovie-zanatiya",
+            "description": "Абонемент на посещение одного спортивного клуба сети Fitness House в составе групповых секций в вечернее время.",
+            "image": "https://cdn.pixabay.com/photo/2018/04/05/17/21/kettlebell-3293475_960_720.jpg",
+            "properties": [
+                {
+                    "name": "Количество занятий",
+                    "value": "36 занятий"
+                },
+                {
+                    "name": "Срок действия",
+                    "value": "1 год"
+                },
+                {
+                    "name": "Время посещения",
+                    "value": "вечер"
+                }
+            ],
+            "price": 2000
+        },
+        {
+            "name": "Мастер-класс",
+            "alias": "master-class",
+            "description": "Посещение одного мастер-класса по авторской методике инструктора в одном из клубов сети Fitness House",
+            "image": "https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232_960_720.jpg",
+            "properties": [
+                {
+                    "name": "Количество занятий",
+                    "value": "разовое посещение"
+                },
+                {
+                    "name": "Срок действия",
+                    "value": "1 месяц"
+                },
+                {
+                    "name": "Категория тренера",
+                    "value": "мастер"
+                }
+            ],
+            "price": 1000
         }
     ]
 }

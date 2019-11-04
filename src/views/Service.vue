@@ -1,11 +1,10 @@
 <template>
     <div class="container mx-auto my-12">
-        <div class="flex -mx-2">
-            <div class="w-1/3 px-2"
+        <div class="-mx-2 flex flex-wrap">
+            <div class="w-1/3 px-2 py-4"
                  v-for="service in services"
             >
                 <ServiceCard
-                        :clubs-length="clubs.length"
                         :service="service"
                 />
             </div>
@@ -25,15 +24,9 @@
         data() {
             return {
                 services: [],
-                clubs: []
             }
         },
         created() {
-            axios.get('../data/clubs.json')
-                .then( response => {
-                    this.clubs = response.data.clubs;
-                });
-
             axios.get('../data/services.json')
                 .then( response => {
                     this.services = response.data.services;
