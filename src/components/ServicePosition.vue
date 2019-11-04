@@ -21,7 +21,7 @@
             </ul>
             <div class="flex">
                 <p class="font-medium text-blue-700">
-                    <span class="text-4xl" v-text="service.price"></span>
+                    <span class="text-4xl" :text-content.prop="service.price | currencyRub"></span>
                     <span class="text-sm"> руб.</span>
                 </p>
                 <button class="button button-blue self-center ml-20">Купить</button>
