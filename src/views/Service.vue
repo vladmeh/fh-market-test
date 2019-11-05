@@ -41,7 +41,7 @@
             return {
                 services: [],
                 services_filters: [],
-                select_filter: {}
+                select_filter: []
             }
         },
         created() {
@@ -52,10 +52,9 @@
                 .then(() => {
                     let filters = [];
                     this.services.forEach(item => {
-                        item.properties.forEach(prop => {
-                            return filters.push({title: prop.title, value: prop.value})
-                        });
+                        item.properties.forEach(prop =>  filters.push(prop));
                     });
+                    console.log(filters);
                     this.services_filters = _.mapValues(_.groupBy(filters, 'title'), list => _.uniq(_.map(list, item => _.omit(item, 'title').value)));
                     return _.map(this.services_filters, (item, key) => {
                         return this.select_filter[key] = key;
@@ -63,11 +62,29 @@
                 });
         },
         computed: {
+            //https://stackoverflow.com/questions/34334769/lodash-filter-nested-object/34335131
             filteredService() {
-                return this.services.filter(item => {
-                    let conditions = [];
-                    return item.name.indexOf(this.select_filter.number_visit)
-                })
+                return this.select_filter['Категория тренера'];
+                // return _.filter(this.services, service => {
+                //     let conditions = [];
+                //     // _.forEach(this.select_filter, (key, value) => {
+                //     //         conditions.push(_.some(service.properties, {
+                //     //             'title' : toString(key),
+                //     //             'value' : toString(value)
+                //     //         }))
+                //     // });
+                //     conditions.push(_.some(service.properties, {
+                //         'title': "Количество занятий",
+                //         'value': this.select_filter["Количество занятий"]
+                //     }));
+                //     return conditions.every(conditions => conditions);
+                // })
+                // return _.filter(this.services, service => {
+                //     return _.some(service.properties, {
+                //         'title': "Категория тренера",
+                //         'value' : this.select_filter["Категория тренера"]
+                //     });
+                // })
             }
         }
     }
