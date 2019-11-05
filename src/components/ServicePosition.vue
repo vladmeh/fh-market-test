@@ -15,7 +15,7 @@
                 <li class="text-sm text-gray-700"
                       v-for="property in service.properties"
                 >
-                    <span v-text="property.name + ' - '"></span>
+                    <span v-text="property.title + ' - '"></span>
                     <span class="font-semibold" v-text="property.value"></span>
                 </li>
             </ul>
