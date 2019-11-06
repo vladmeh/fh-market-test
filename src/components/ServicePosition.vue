@@ -4,12 +4,12 @@
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <img class="w-full"
                      :src="service.image"
-                     :alt="service.name"
+                     :alt="service.title"
                 />
             </div>
         </div>
         <div class="w-2/5">
-            <h3 class="font-bold text-xl" v-text="service.name"></h3>
+            <h3 class="font-bold text-xl" v-text="service.title"></h3>
             <p class="text-gray-700 text-base py-4" v-html="service.description"></p>
             <ul class="my-5">
                 <li class="text-sm text-gray-700"

@@ -2,13 +2,13 @@
     <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto">
         <router-link
                 tag="img"
-                :to="{name: 'position', params: {alias: service.alias, name: service.name}}"
+                :to="{name: 'position', params: {alias: service.alias, name: service.title}}"
                 class="w-full cursor-pointer"
                 :src="service.image"
-                :alt="service.name"
+                :alt="service.title"
         ></router-link>
         <div class="px-6 py-4">
-            <h3 class="font-bold text-xl mb-6" v-text="service.name"></h3>
+            <h3 class="font-bold text-xl mb-6" v-text="service.title"></h3>
             <p class="text-gray-700 text-base" :text-content.prop="service.description | truncate(100)"></p>
         </div>
         <div class="px-6 py-4">

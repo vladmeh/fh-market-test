@@ -1,8 +1,6 @@
 <template>
     <div class="container mx-auto my-12">
-        <ServicePosition
-                :service="service"
-        />
+        <ServicePosition :service="service"/>
     </div>
 </template>
 
