@@ -5,8 +5,8 @@
                 <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         v-model="select_filter[key]"
                 >
-                    <option value="" v-text="item.title"></option>
-                    <option v-for="value in item.values" v-text="value"></option>
+                    <option value="" v-text="key"></option>
+                    <option v-for="value in item" v-text="value"></option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -38,54 +38,37 @@
         data() {
             return {
                 services: [],
-                services_filters: [],
-                select_filter: {
-                    coach_category: '',
-                    number_visit: '',
-                    time_visit: '',
-                    type_section: '',
-                    validity_period: ''
-                }
+                select_filter: {}
             }
         },
         created() {
             axios.get('../data/services.json')
                 .then(response => {
                     this.services = response.data.services;
-                });
+                })
+                .then(() => {
+                    this.select_filter = _.reduce(this.getProperties(), (groups, item) => {
+                        groups[item.title] = groups[item.title] || {};
+                        groups[item.title] = "";
+
+                        return groups;
+                    }, {});
+                })
+            ;
         },
         computed: {
             filtersServices() {
-                let filters = [];
-                this.services.forEach(item => {
-                    item.properties.forEach(prop => filters.push(prop));
-                });
-
                 return _.mapValues(
-                    _.mapValues(
-                        _.groupBy(filters, 'name'),
+                        _.groupBy(this.getProperties(), 'title'),
                         list => _.uniqWith(
-                            _.map(list, item => _.omit(item, 'name')),
+                            _.map(list, item => _.omit(item, 'title').value),
                             _.isEqual
-                        )
-                    ), items => {
-                        const result = {};
-
-                        _.map(_.mapValues(_.groupBy(items, 'title'),
-                            list => _.mapValues(list, item => item.value)
-                        ), (values, key) => {
-                            result.title = key;
-                            result.values = values;
-                        });
-
-                        return result;
-                    }
-                );
+                        ));
             },
             filteredService() {
                 const services = _.forEach(this.services, service => {
                     _.map(service.properties, property => {
-                        return service[property.name] = property.value
+                        return service[property.title] = property.value
                     })
                 });
 
@@ -99,6 +82,16 @@
                     return conditions.every(conditions => conditions);
                 })
             }
-        }
+        },
+        methods: {
+            getProperties(){
+                let filters = [];
+                this.services.forEach(item => {
+                    item.properties.forEach(prop => filters.push({title: prop.title, value: prop.value}));
+                });
+
+                return filters;
+            }
+        },
     }
 </script>

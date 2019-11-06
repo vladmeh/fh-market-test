@@ -7,12 +7,10 @@
             "image": "https://cdn.pixabay.com/photo/2015/01/09/11/22/fitness-594143_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "100 занятий"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "1 год"
                 }
@@ -26,17 +24,14 @@
             "image": "https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "100 занятий"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "1 год"
                 },
                 {
-                    "name" : "time_visit",
                     "title": "Время посещения",
                     "value": "утро"
                 }
@@ -50,17 +45,14 @@
             "image": "https://cdn.pixabay.com/photo/2016/03/27/21/55/sunglasses-1284419_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "18 занятий"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "6 месяцев"
                 },
                 {
-                    "name" : "type_section",
                     "title": "Тип секции",
                     "value": "вода"
                 }
@@ -74,17 +66,14 @@
             "image": "https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "18 занятий"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "6 месяцев"
                 },
                 {
-                    "name" : "coach_category",
                     "title": "Категория тренера",
                     "value": "мастер"
                 }
@@ -98,17 +87,14 @@
             "image": "https://cdn.pixabay.com/photo/2018/04/05/17/21/kettlebell-3293475_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "36 занятий"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "1 год"
                 },
                 {
-                    "name" : "time_visit",
                     "title": "Время посещения",
                     "value": "вечер"
                 }
@@ -122,17 +108,14 @@
             "image": "https://cdn.pixabay.com/photo/2016/03/27/07/08/man-1282232_960_720.jpg",
             "properties": [
                 {
-                    "name" : "number_visit",
                     "title": "Количество занятий",
                     "value": "разовое посещение"
                 },
                 {
-                    "name" : "validity_period",
                     "title": "Срок действия",
                     "value": "1 месяц"
                 },
                 {
-                    "name" : "coach_category",
                     "title": "Категория тренера",
                     "value": "профи"
                 }

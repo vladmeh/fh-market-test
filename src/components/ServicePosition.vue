@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
-        <div class="w-2/5">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="w-3/5">
+            <div class="max-w-xl rounded overflow-hidden shadow-lg">
                 <img class="w-full"
                      :src="service.image"
                      :alt="service.title"
