@@ -42,7 +42,7 @@
             }
         },
         created() {
-            axios.get('/data/services.json')
+            axios.get('./data/services.json')
                 .then(response => {
                     this.services = response.data.services;
                 })
