@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto my-12">
-        <ServicePosition :service="service"/>
+        <ServicePosition :service="service" @add-cart="addCart"/>
     </div>
 </template>
 
@@ -25,6 +25,11 @@
                         data => data.alias === this.$route.params.alias
                     );
                 });
+        },
+        methods: {
+            addCart(){
+                return this.$emit('add-cart');
+            }
         }
     }
 </script>

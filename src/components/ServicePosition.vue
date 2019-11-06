@@ -24,7 +24,7 @@
                     <span class="text-4xl" :text-content.prop="service.price | currencyRub"></span>
                     <span class="text-sm"> руб.</span>
                 </p>
-                <button class="button button-blue self-center ml-20">Купить</button>
+                <button @click="addCart" class="button button-blue self-center ml-20">Купить</button>
             </div>
         </div>
     </div>
@@ -35,6 +35,11 @@
         name: "ServicePosition",
         props: {
             service: Object
+        },
+        methods: {
+            addCart(){
+                return this.$emit('add-cart')
+            }
         }
     }
 </script>
