@@ -19,7 +19,7 @@
             }
         },
         created() {
-            axios.get('./data/services.json')
+            axios.get('./../data/services.json')
                 .then(response => {
                     this.service = response.data.services.find(
                         data => data.alias === this.$route.params.alias
